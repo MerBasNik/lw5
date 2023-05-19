@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/css/index-style.css">
+    <link rel="stylesheet" href="../static/css/main-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Oxygen&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@700&family=Oxygen&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Escape</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__inner-title">
+                        <p>Escape.</p>
+                    </div>
+                    <nav class="nav">
+                        <a class="nav__link" href="#">home</a>
+                        <a class="nav__link" href="#">categories</a>
+                        <a class="nav__link" href="#">about</a>
+                        <a class="nav__link" href="#">contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    
+        <main class="main">
+            <div class="intro">
+                <div class="intro__inner">
+                    <div class="intro__text">
+                        <h1 class="intro__text-title">Let's do it together.</h1>
+                        <p class="intro__text-subtitle">We travel the world in search of stories. 
+                        Come along for the ride.</p>
+                    </div>
+                    <a class="button intro__button" href="#">View Latest Posts</a>
+                </div>    
+            </div>
+    
+            <nav class="nav nav--main">
+                <div class="container">
+                    <div class="nav__inner">
+                        <div class="nav__inner-item">
+                            <a class="nav__link nav__inner-link" href="#">Nature</a>
+                        </div>
+                        <div class="nav__inner-item">
+                            <a class="nav__link nav__inner-link" href="#">Photography</a>
+                        </div>
+                        <div class="nav__inner-item">
+                            <a class="nav__link nav__inner-link" href="#">Relaxation</a>
+                        </div>
+                        <div class="nav__inner-item">
+                            <a class="nav__link nav__inner-link" href="#">Vacation</a>
+                        </div>
+                        <div class="nav__inner-item">
+                            <a class="nav__link nav__inner-link" href="#">Travel</a>
+                        </div>
+                        <div class="nav__inner-item">
+                            <a class="nav__link nav__inner-link" href="#">Adventure</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+    
+            
+            <div class="features">
+                <div class="container">
+                    <div class="features__title">
+                        <p class="features__title-p">Featured Posts</p>
+                    </div>
+                    <div class="features__inner">
+                        {{ range .FeaturedPosts }}
+                        <div class="{{ .Item }}">
+                            <div class="features__item-button">
+                                <a class="{{ .Features__button }}" href="#">{{ .Button }}</a>
+                            </div>
+                            <div class="features__item--text">
+                                <p class="features__item-title">{{ .Title }}</p>
+                                <p class="features__item-subtitle">{{ .Subtitle }}</p>
+                            </div>
+                            <div class="features__item--footer f_footer">
+                                <div class="f_footer-l">
+                                    <img class="f_footer--icon" src="{{ .Icon }}" alt="{{ .Text }}">
+                                    <p class="f_footer--text">{{ .Text }}</p>
+                                </div>
+                                <div class="f_footer-r">
+                                    <p class="f_footer--text">{{ .Date }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <div class="about">
+                <div class="container">
+                    <div class="about__title">
+                        <p class="about__title-p">Most Recent</p>
+                    </div>
+                    <div class="about__inner">
+                        {{ range .AboutPosts }}
+                        <div class="about__inner-item about__item">
+                            <div class="about__item-photo">
+                                <img class="about__item--img" src="{{ .Image }}" alt="">
+                            </div>
+                            <div class="about__item-text">
+                                <p class="about__item--title">{{ .Title }}</p>
+                                <p class="about__item--subtitle">{{ .Subtitle }}</p>
+                            </div>
+                            <div class="about__item-footer a_footer">
+                                <div class="a_footer-l">
+                                    <img class="a_footer--icon" src="{{ .Icon }}" alt="{{ .Text }}">
+                                    <p class="a_footer--text">{{ .Text }}</p>
+                                </div>
+                                <div class="a_footer-r">
+                                    <p class="a_footer--text">{{ .Date }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__intro">
+                    <p class="footer__intro-title">Stay in Touch</p>
+                    <form class="footer__intro-form">
+                        <input class="form__input-text" type="text" name="email" placeholder="Enter your email address">
+                        <input class="form__input-submit" type="submit" value="submit">
+                    </form>
+                </div>
+            </div>
+            <div class="footer__inner">
+                <div class="container">
+                    <div class="footer__inner-item">
+                        <div class="item__title">
+                            <p>Escape.</p>
+                        </div>
+                        <nav class="nav">
+                            <a class="nav__link footer--nav" href="#">home</a>
+                            <a class="nav__link footer--nav" href="#">categories</a>
+                            <a class="nav__link footer--nav" href="#">about</a>
+                            <a class="nav__link footer--nav" href="#">contact</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+    </div>
+      
+</body>    
+</html>

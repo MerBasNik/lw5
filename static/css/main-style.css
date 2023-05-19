@@ -1,0 +1,208 @@
+html{
+    box-sizing: border-box;
+}
+
+html, 
+body{
+    height: 100%;
+}
+
+body{
+    color: #fff;
+}
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex-grow: 1;
+    background-color: #F7F7F7;
+    padding-bottom: 108px;
+}
+
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 964px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+/* HEADER */
+.header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 28px;
+}
+
+.header__inner-title {
+    font: 400 26px 'Lora';
+}
+
+
+
+/* NAVIGATION */
+.nav {
+    background-color: transparent;
+}
+
+.nav--main {
+    background-color: #fff;
+}
+
+.nav__inner {
+    padding: 9px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__inner-item {
+    display: inline; 
+    text-align: center;
+    padding: 13px 0;
+    gap: 21px;
+    width: 16%;
+}
+
+.nav__link {
+    color: #fff;
+    padding: 0 20px 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font: 12px/1.67 'Oxygen';
+    display: inline-block;
+    position: relative;
+}
+
+.nav__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 2px;
+    width: 0;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.nav__link:hover::after {
+    width: 100%; 
+    left: 0; 
+}
+
+.nav__inner-link {
+    text-transform: none;
+    color: #768088;
+    font: 400 14px 'Lora';
+}
+
+.nav__inner-link::after {
+    background: #768088;
+}
+
+
+/* FOOTER */
+.footer {
+    background: #fff url(../images/header&footer/footer2.png) center no-repeat;
+    background-size: cover
+}
+
+.footer__intro {
+    padding: 81px 0 90px;
+    text-align: center;
+}
+
+.footer__intro-title {
+    padding-bottom: 16px;
+    display: inline-block;
+    text-align: center;
+    border-bottom: solid 1px #DEDEDE;
+    color: #EFEFEF;
+    font: 400 25px 'Oxygen';
+}
+
+.footer__intro-form {
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.form__input-text {
+    color: #817F83;
+    font: 400 12px 'Oxygen';
+    padding: 18px 35px;
+    width: 375px;
+    border: 0;
+}
+
+.form__input-submit {
+    padding: 18px 44px;
+    color: #F8F8F8;
+    font: 400 12px 'Oxygen';
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.28);
+    transition: background-color 0.6s, transform 0.5s;
+}
+
+.form__input-submit:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.footer__inner {
+    background-color: #232F38;
+    background-size: cover;
+    opacity: 0.6;
+}
+
+.footer__inner-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+    box-sizing: border-box;
+}
+
+.item__title {
+    font: 400 26px 'Lora';
+    color: #fff;
+}
+
+.footer--nav {
+    font: 400 11px 'Oxygen';
+    opacity: 0.6;
+}
+
+

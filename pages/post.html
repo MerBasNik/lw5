@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/css/main-style.css">
+    <link rel="stylesheet" href="../static/css/the-road-ahead_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Oxygen&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@700&family=Oxygen&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>The Road Ahead</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__inner-title">
+                        <p>Escape.</p>
+                    </div>
+                    <nav class="nav">
+                        <a class="nav__link header--nav" href="#">home</a>
+                        <a class="nav__link header--nav" href="#">categories</a>
+                        <a class="nav__link header--nav" href="#">about</a>
+                        <a class="nav__link header--nav" href="#">contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="intro">
+                <div class="intro__text">
+                    <h1 class="intro__title">{{ .Title }}</h1>
+                    <p class="intro__subtitle">{{ .Subtitle }}</p>
+                </div>
+            </div>
+
+            <div class="picture">
+                <img class="picture__img" src="{{ .Image }}" alt="{{ .Name }}">
+            </div>
+
+            <div class="container">
+                <div class="text">
+                    {{ range .Page }}
+                    <p>
+                        {{ .P }}
+                        <br><br>
+                    </p>
+                    {{ end }}
+                </div>  
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__intro">
+                    <p class="footer__intro-title">Stay in Touch</p>
+                    <form class="footer__intro-form">
+                        <input class="form__input-text" type="text" name="email" placeholder="Enter your email address">
+                        <input class="form__input-submit" type="submit" value="submit">
+                    </form>
+                </div>
+            </div>
+            <div class="footer__inner">
+                <div class="container">
+                    <div class="footer__inner-item">
+                        <div class="item__title">
+                            <p>Escape.</p>
+                        </div>
+                        <nav class="nav">
+                            <a class="nav__link footer--nav" href="#">home</a>
+                            <a class="nav__link footer--nav" href="#">categories</a>
+                            <a class="nav__link footer--nav" href="#">about</a>
+                            <a class="nav__link footer--nav" href="#">contact</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+    </div>
+</body>
+</html>

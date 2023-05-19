@@ -1,0 +1,46 @@
+body {
+    color: #2E2E2E;
+}
+
+/* HEADER */
+.header,
+.header--nav {
+    color: #2E2E2E;
+}
+
+.header--nav::after {
+    background-color: #2E2E2E;
+}
+
+.main {
+    padding-bottom: 0;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    padding: 163px 221px 157px;
+}
+
+.intro__title {
+    font: 400 50px 'Lora';
+    margin-bottom: 20px;
+}
+
+.intro__subtitle {
+    font-size: 17px;
+    font-family: 'Oxygen';
+    opacity: 0.63;
+}
+
+/* PICTURE */
+.picture__img {
+    width: 100%;
+}
+
+/* TEXT */
+.text {
+    padding: 140px 0 135px;
+    color: #101315;
+    font: 400 26px/1.46 'Oxygen';
+}
